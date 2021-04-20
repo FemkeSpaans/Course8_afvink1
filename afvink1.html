@@ -7,14 +7,23 @@
     <title>Biological data searchword finder</title>
 </head>
 <body>
-<form action="{{ url_for('/', methods=['POST'])}}">
+<form method="post" action="{{ url_for("home") }}">
     <p>
         <label for="searchword">Searchword:</label><br>
-  <input type="text" id="searchword" name="searchword" required><br>
+        <input type="text" id="searchword" name="searchword" required><br>
     </p>
     <p>
-        <input type="button" value="Submit" formmethod="post">
+        <input type="submit" value="Submit" formmethod="post">
     </p>
 </form>
+{% if rows %}
+        <ul>
+            {% for item in rows %}
+                <li>
+                    {{ item }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </body>
 </html>
