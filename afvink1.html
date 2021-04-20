@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Finding a searchword in biological data">
+    <meta name="author" content="Femke Spaans">
+    <title>Biological data searchword finder</title>
+</head>
+<body>
+<form action="{{ url_for('/', methods=['POST'])}}">
+    <p>
+        <label for="searchword">Searchword:</label><br>
+  <input type="text" id="searchword" name="searchword" required><br>
+    </p>
+    <p>
+        <input type="button" value="Submit" formmethod="post">
+    </p>
+</form>
+</body>
+</html>
