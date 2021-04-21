@@ -20,7 +20,7 @@
         <ul>
             {% for item in rows %}
                 <li>
-                    {{ item }}
+                    {{ item|safe }}
                 </li>
             {% endfor %}
         </ul>
